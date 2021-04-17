@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import sigmoid_kernel
 
-food_df = pd.read_csv(r"indian_food.csv")
+food_df = pd.read_csv(r"C:\Users\KABILAN PARAMASIVAM\Documents\VS Code\Projects\waiter_less_system-main\indian_food.csv")
 food_cleaned_df = food_df.drop(columns=['ingredients', 'prep_time', 'cook_time', 'region'])
 food_cleaned_df["adjusted"] = food_cleaned_df["flavor_profile"] + ' ' + food_cleaned_df["course"] + ' ' + \
                               food_cleaned_df["state"]
@@ -23,5 +23,6 @@ def give_rec(name, sig=sigs):
     print(food_indices)
     return food_indices
 
+give_rec('Koldil Chicken')
 
 
