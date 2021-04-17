@@ -20,6 +20,7 @@ def give_rec(name, sig=sigs):
     sig_scores = sorted(sig_scores, key=lambda x: x[1], reverse=True)
     sig_scores = sig_scores[1:11]
     food_indices = [i[0] for i in sig_scores]
+    print(food_indices)
     return food_indices
 
 
